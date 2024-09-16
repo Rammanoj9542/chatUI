@@ -1,0 +1,46 @@
+  
+  .coverflowItem {
+    padding: 10px;
+    transition: transform 0.3s;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .itemContent {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Add background-color and color transition */
+  }
+  
+  .slick-center .itemContent {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Add hover effect */
+  .coverflowItem:hover .itemContent {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Default light theme styles */
+.slick-prev:before, .slick-next:before {
+    color: black;  /* Default button color */
+  }
+  
+  /* Dark theme styles */
+  .dark-theme .slick-prev:before, .dark-theme .slick-next:before {
+    color: white;  /* Button color for dark theme */
+  }
+  
+  /* Additional custom styles if needed */
+  .slick-prev, .slick-next {
+    z-index: 1; /* Ensure buttons are on top */
+  }
+  

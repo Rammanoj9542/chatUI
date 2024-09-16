@@ -1,0 +1,14 @@
+version: '3'
+services:  
+  frontend:
+    build:
+      context: ./frontend  # Path to the directory containing the Node.js UI app
+      dockerfile: Dockerfile # Specify the Node.js Dockerfile
+    environment:
+      - BackendServiceIp=${BackendServiceIp}
+      - BackendServicePort=${BackendServicePort}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_PORT=${REDIS_PORT}    
+    ports:
+      - "3000:3000" # Map the container's port 3000 to the host's port 3000
